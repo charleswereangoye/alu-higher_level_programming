@@ -1,9 +1,7 @@
 #!/usr/bin/python3
-class MyClass:
-    def __init__(self):
-        self.x = 10
-    def method(self):
-        pass
+'''A function that defines clearly object's attributes '''
 
-obj = MyClass()
-print(lookup(obj))
+
+def lookup(obj):
+    '''return object atts and methods'''
+    return list(dir(obj))

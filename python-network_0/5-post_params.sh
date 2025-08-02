@@ -1,3 +1,3 @@
 #!/bin/bash
-# A script that sends an HTTP request with a custom header
-curl -sX POST --data "email=test@gmail.com&subject=I will always be here for PLD" "$1"
+# Curl sends POST req to URL, display response body
+curl -s -X POST -d "email=test@gmail.com&subject=I will always be here for PLD" "$1"

@@ -1,3 +1,3 @@
 #!/bin/bash
-# A script that displays all the allowed method a server can process
-curl -sI "$1" | grep -i "Allow" | cut -d " " -f2-
+# curl to display all HTTP methods the server accepts
+curl -sI "$1" | grep "Allow" | cut -d " " -f 2-

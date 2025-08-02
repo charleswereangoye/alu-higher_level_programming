@@ -1,11 +1,11 @@
 #!/usr/bin/python3
-"""Fetches https://alu-intranet.hbtn.io/status and displays the response info"""
-
+# python script that fetches 'https://alu-intranet.hbtn.io/status'
+""" fetch 'https://intranet.hbtn.io/status'"""
 import requests
 
+
 if __name__ == "__main__":
-    response = requests.get("https://alu-intranet.hbtn.io/status")
-    content = response.text
+    r = requests.get("https://intranet.hbtn.io/status")
     print("Body response:")
-    print("\t- type: {}".format(type(content)))
-    print("\t- content: {}".format(content))
+    print("\t- type: {}".format(type(r.text)))
+    print("\t- content: {}".format(r.text))

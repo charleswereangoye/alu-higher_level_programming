@@ -1,1 +1,2 @@
-this bash script explain URLs, HTTPs, ..
+Documentation for current repo
+

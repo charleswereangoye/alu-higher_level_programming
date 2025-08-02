@@ -1,15 +1,18 @@
 #!/usr/bin/python3
-"""Fetches a URL and handles HTTPError exceptions"""
+"""send request."""
+import urllib.request
+import urllib.error
+import sys
 
-from urllib.request import urlopen
-from urllib.error import HTTPError
-from sys import argv
+
+def send_request():
+    """Send request."""
+    try:
+        with urllib.request.urlopen(sys.argv[1]) as re:
+            xyz = re.read()
+            print(xyz.decode("utf-8"))
+    except urllib.error.HTTPError as err:
+        print("Error code: {}".format(err.code))
 
 if __name__ == "__main__":
-    url = argv[1]
-    try:
-        with urlopen(url) as response:
-            body = response.read()
-            print(body.decode("utf-8"))
-    except HTTPError as e:
-        print("Error code: {}".format(e.code))
+    send_request()

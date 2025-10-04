@@ -1,12 +1,10 @@
 #!/usr/bin/node
-const arguement = 'Best';
+const arguement = process.argv.length - 2;
 
-if (arguement === '#') {
+if (arguement === 0) {
     console.log('No argument');
-    }
-else if (arguement === 'Best') {
+}else if (arguement === 1) {
     console.log('Argument found');
-    }
-else {
+}else {
     console.log('Arguments found');
-    }
+}

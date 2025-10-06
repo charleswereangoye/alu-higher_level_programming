@@ -1,0 +1,1 @@
+in this project am doing javascript projects on object scope and closure
